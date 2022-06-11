@@ -1,0 +1,20 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.2.0
+  - chiru-labs/ERC721A@4.0.0
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.2.0"
+      - "erc721a=chiru-labs/ERC721A@4.0.0"
+
+dev_deployment_artifacts: True
+networks:
+  development:
+    verify: False
+  polygon-main:
+    verify: True
+  polygon-test:
+    verify: True
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
